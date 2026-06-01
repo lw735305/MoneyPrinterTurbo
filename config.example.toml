@@ -45,6 +45,7 @@ pixabay_api_keys = []
 #   ernie       (文心一言)
 #   modelscope  (魔搭社区)
 #   litellm     (100+ providers via LiteLLM gateway)
+#   doubao      (字节跳动豆包)
 llm_provider = "openai"
 
 ########## Pollinations AI Settings
@@ -147,6 +148,13 @@ mimo_tts_style_prompt = "请用自然、清晰、适合短视频旁白的语气�
 deepseek_api_key = ""
 deepseek_base_url = "https://api.deepseek.com"
 deepseek_model_name = "deepseek-chat"
+
+########## Doubao API Key (字节跳动豆包)
+# Visit https://www.volcengine.com/product/doubao to get your API key
+# Doubao API is OpenAI-compatible
+doubao_api_key = ""
+doubao_base_url = "https://ark.cn-beijing.volces.com/api/v3"
+doubao_model_name = "doubao-3.5-pro-250320"
 
 
 ########## ModelScope API Key

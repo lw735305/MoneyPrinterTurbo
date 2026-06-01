@@ -243,6 +243,7 @@ if not config.app.get("hide_config", False):
                 "Azure",
                 "Qwen",
                 "DeepSeek",
+                "Doubao",
                 "ModelScope",
                 "Gemini",
                 "Grok",
@@ -404,6 +405,18 @@ if not config.app.get("hide_config", False):
                             - **API Key**: [点击到官网申请](https://platform.deepseek.com/api_keys)
                             - **Base Url**: 固定为 https://api.deepseek.com
                             - **Model Name**: 固定为 deepseek-chat
+                            """
+            if llm_provider == "doubao":
+                if not llm_model_name:
+                    llm_model_name = "doubao-3.5-pro-250320"
+                if not llm_base_url:
+                    llm_base_url = "https://ark.cn-beijing.volces.com/api/v3"
+                with llm_helper:
+                    tips = """
+                            ##### 豆包 Doubao 配置说明
+                            - **API Key**: [点击到官网申请](https://www.volcengine.com/product/doubao)
+                            - **Base Url**: 固定为 https://ark.cn-beijing.volces.com/api/v3
+                            - **Model Name**: 比如 doubao-3.5-pro-250320，[点击查看模型列表](https://www.volcengine.com/docs/82379/1164491)
                             """
 
             if llm_provider == "mimo":

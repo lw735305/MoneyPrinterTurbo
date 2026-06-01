@@ -161,6 +161,15 @@ def _generate_response(prompt: str) -> str:
                     base_url = "https://api.xiaomimimo.com/v1"
                 if not model_name:
                     model_name = "mimo-v2.5-pro"
+            elif llm_provider == "doubao":
+                api_key = config.app.get("doubao_api_key")
+                model_name = config.app.get("doubao_model_name")
+                base_url = config.app.get("doubao_base_url", "")
+                # 字节跳动豆包 API 兼容 OpenAI Chat Completions 协议。
+                if not base_url:
+                    base_url = "https://ark.cn-beijing.volces.com/api/coding"
+                if not model_name:
+                    model_name = "Doubao-Seed-2.0-pro"
             elif llm_provider == "deepseek":
                 api_key = config.app.get("deepseek_api_key")
                 model_name = config.app.get("deepseek_model_name")
